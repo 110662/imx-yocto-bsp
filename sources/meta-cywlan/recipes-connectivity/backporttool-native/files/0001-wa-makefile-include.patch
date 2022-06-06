@@ -1,0 +1,20 @@
+diff --git a/Makefile.kernel b/Makefile.kernel
+index 5c9669748116..b5c3ab6897d0 100644
+--- a/Makefile.kernel
++++ b/Makefile.kernel
+@@ -9,6 +9,7 @@ NOSTDINC_FLAGS := \
+ 	-I$(M)/backport-include/uapi \
+ 	-I$(M)/include/ \
+ 	-I$(M)/include/uapi \
++	-I${M}/drivers/net/wireless/broadcom/brcm80211/include/ \
+ 	-include $(M)/backport-include/backport/backport.h \
+ 	$(call backport-cc-disable-warning, unused-but-set-variable) \
+ 	-DCPTCFG_VERSION=\"$(BACKPORTS_VERSION)\" \
+@@ -26,6 +27,7 @@ NOSTDINC_FLAGS := \
+ 	-I$(BACKPORT_DIR)/backport-include/uapi \
+ 	-I$(BACKPORT_DIR)/include/ \
+ 	-I$(BACKPORT_DIR)/include/uapi \
++	-I${M}/drivers/net/wireless/broadcom/brcm80211/include/ \
+ 	-include $(BACKPORT_DIR)/backport-include/backport/backport.h \
+ 	$(CFLAGS)
+ endif
